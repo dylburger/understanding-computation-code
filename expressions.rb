@@ -72,6 +72,7 @@ class Machine < Struct.new(:expression, :environment)
             puts expression
             step
         end
+
         puts expression
     end
 end
@@ -124,7 +125,7 @@ class Variable < Struct.new(:name)
     end
 
     def reducible?
-        false
+        true
     end
 
     def reduce(environment)
